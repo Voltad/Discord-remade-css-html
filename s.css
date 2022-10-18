@@ -1,18 +1,279 @@
 @font-face {
   font-family: "f1";
-  src: url(font/whitneylight.otf);   /* Télécharger la font et mettez la dans un dossier appelé font a la racine du projet  https://www.cufonfonts.com/font/whitney-2 */
+  src: url(font/whitneylight.otf);
+
   font-family: "f2";
-  src: url(font/whitneymedium.otf);   /* Télécharger la font et mettez la dans un dossier appelé font a la racine du projet  https://www.cufonfonts.com/font/whitney-2 */
+  src: url(font/whitneysemibold.otf);
+
+  font-family: "f3";
+  src: url(font/whitneymedium.otf);
 }
 
 body {
-  background: rgb(54,57,62);
   font-family: "f1", sans-serif;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background: #36393F;
+}
+
+/** Display des containers [FLEX] **/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: normal;
+  align-content: normal;
+}
+
+.container-message-channel {
+  background: #36393F;
+  width: 1368px;
+  height: 937px;
+}
+
+.container-server-list {
+  background-color: #202225;
+  width: 76px;
+  height: 937px;
 
 }
 
+.container-channel-list {
+  background: #2F3136;
+  width: 243px;
+  height: 937px;
+}
+
+
+
+.container-user-list {
+  background: #2F3136;
+  width: 218px;
+  height: 937px;
+}
+
+/** Server List Container **/
+
+.discord-lg {
+  height: 30px;
+  padding: 7px;
+  margin: -4px;
+
+}
+
+.home{
+  background: #36393F;
+  display: block;
+  width: 35px;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  margin: 10px;
+  height: 35px;
+  border-radius: 100px;
+  transition: ease .1s;
+}
+
+.home:hover {
+  background: #5865F2;
+  border-radius: 22px;
+}
+
+.server {
+  background: #36393F;
+  display: block;
+  width: 35px;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  margin: 10px;
+  height: 35px;
+  border-radius: 100px;
+  transition: ease .1s;
+}
+
+.server:hover {
+  border-radius: 40%;
+}
+
+.server-lg {
+  width: 50px;
+  height: 50px;
+  margin: -7.5px;
+  border-radius: 100px;
+}
+
+.border-line {
+  background: white;
+  height: 50px;
+  margin-top: 30px;
+  width: 4px;
+  border-radius: 30%;
+}
+
+.border-round {
+  margin-top: 20px;
+}
+
+
+/** Bouton du bas server list **/
+
+.bottom-display {
+  padding-top: 535px;
+}
+
+.add-server {
+  color: #3BA55D;
+  transition: ease .3s;
+  
+}
+
+.fa-compass {
+  padding: 5px;
+  padding-top: 18px;
+}
+
+.add-server:hover {
+  background: #3BA55D;
+  color: white;
+  border-radius: 40%;
+}
+
+.fa-plus {
+  padding: 7px;
+  padding-top: 18px;
+}
+
+/** ChannelList **/
+
+.server-info {
+  background: #2F3136;
+  box-shadow: 1px 3px 0px #2B2B30;
+  padding: 5px;
+  font-family: "f2", sans-serif;
+  font-weight: bold;
+
+  color: #ffffff;
+  transition: ease .2s;
+} 
+
+.title {
+  margin: 17px;
+}
+
+.fa-angle-down {
+  float: right;
+}
+
+.server-info:hover {
+  background: #3C3F45;
+}
+
+.text-channel {
+ padding: 10px;
+ margin: 15px;
+ color: #96969D;
+ font-family: "f3", sans-serif;
+ font-size: 18px;
+}
+
+.fa-hashtag {
+  margin-right: 7px;
+}
+
+.text-channel:hover {
+  background: #42464D;
+  color: white;
+  border-radius: 10px;
+}
+
+/** Profile container **/
+
+.profile-container {
+  padding-top: 686px;
+
+}
+
+.down-profile-info{
+  background: #292B2F;
+  display: flex;
+  position: relative;
+  font-family: "f3", sans-serif;
+  height: 82px;
+
+}
+
+.username {
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  margin-top: 2px;
+  margin-left: -5px;
+}
+
+.tag {
+  color: #B4B2B5;
+  margin-top: -13px;
+  font-size: 13px;
+}
+
+.profile-icon {
+  padding-top: 35px;
+  color: #B9BBBE;
+  padding-left: 5px;
+}
+
+.sep {
+  padding: 2.5px;
+}
+
+.sep:hover {
+  color: #646568;
+
+}
+
+.profile-hover:hover {
+  background: #646568;
+
+}
+
+.upbar {
+  background: #36393F;
+  box-shadow: 1px 3px 0px #2B2B30;
+  display: flex;
+
+}
+
+
+.channel-info {
+  margin: 6px;
+}
+
+
+.channeltxt {
+  color: white;
+  font-family: "f3", sans-serif;
+}
+
+.right-icon {
+  color: #B9BBBE;
+  float: right;
+  margin-left: 955px;
+  margin-top: 15px;
+  
+}
+
+.sepa {
+  padding: 10px;
+  transition: ease .1s;
+}
+
+.sepa:hover {
+  color: white;
+}
+
+/** Embed **/
 .userinfo {
   display: flex;
   flex-direction:row;
@@ -23,13 +284,13 @@ body {
   margin-top: 25px;
 }
 .pfp {
-  width: 2.5%;
+  width: 3%;
   padding: 20px;
 }
 
 .username {
   color: white;
-  padding-top: 15px;
+  padding-top: -28px;
 }
 
 .timestamp,
@@ -128,4 +389,60 @@ body {
 
 .fa-arrow-up-right-from-square {
   padding-left: 5px;
+}
+
+.usernamee {
+  color: white;
+  padding-top: 14px;
+  font-family: "f3";
+}
+
+.down-text-sender {
+  background: #40444B;
+  height: 53px;
+  width: 1325px;
+  margin-left: 25px;
+  margin-top: 190px;
+  border-radius: 12px;
+}
+
+.fa-square-plus {
+  color: #B9BBBE;
+  margin: 10px;
+  margin-top: 25px;
+}
+
+.placeholder {
+  color: #636668;
+  font-family: "f3", sans-serif;
+}
+
+.rig-icon {
+  color: #B9BBBE;
+  margin-left: 1150px;
+  margin-top: -35px;
+}
+
+.container-user-list {
+  font-family: "f3", sans-serif;
+}
+
+.online-user {
+  color: #96989D;
+  padding: 25px;
+}
+
+.users1 {
+  color: #96989D;
+  margin-top: -65px;
+}
+
+.pfps {
+  margin-top: -150px;
+}
+
+.psd {
+  color: #96989D;
+  margin-top: -75px;
+  margin-left: 70px;
 }
